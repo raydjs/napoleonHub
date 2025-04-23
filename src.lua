@@ -29,6 +29,26 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local linkvertise = 'https://ads.luarmor.net/get_key?for=hubKey-bbTFbWlaffcB'
 local keyFile = 'NAPOLEON_IS_THE_GREATEST_KEY.txt'
 
+local function getKey()
+    if isfile(keyFile) then
+        return readfile(keyFile)
+    end
+end
+
+local key = getKey()
+
+local status = api.check_key(script_key or key)
+
+if status.code == 'KEY_VALID' then
+    script_key = script_key or key
+
+    task.delay(2, function()
+        Rayfield:Destroy()
+    end)
+    api.load_script()
+    return
+end
+
 local Window = Rayfield:CreateWindow({
     Name = 'Napoleon',
     LoadingTitle = 'bonaparte.',
@@ -39,29 +59,6 @@ local Window = Rayfield:CreateWindow({
         RememberJoins = true,
     },
 })
-
-local function getKey()
-    if isfile(keyFile) then
-        return readfile(keyFile)
-    end
-end
-
-local key = getKey()
-
-if key then
-    local status = api.check_key(script_key or key)
-
-    if status.code == 'KEY_VALID' then
-        script_key = script_key or key
-
-        task.delay(2, function()
-            Rayfield:Destroy()
-        end)
-        api.load_script()
-    else
-        return
-    end
-end
 
 local tabKey = Window:CreateTab('Key', 4483362458)
 local Input = tabKey:CreateInput({
