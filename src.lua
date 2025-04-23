@@ -19,7 +19,7 @@ local games = if ID == 73956553001240 or ID == 134314141048307 or ID == 10968459
      nil
 
 if games == nil then
-    return
+    return print(games)
 end
 
 api.script_id = games
