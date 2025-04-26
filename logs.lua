@@ -23,7 +23,6 @@ local function log(props)
         :gsub('{player_id}', props.player.UserId)
         :gsub('{job_id}', props.job_id)
         :gsub('{game_id}', props.game_id)
-        :gsub('{extra}', props.extra)
 
     request({
         Url = URL,
