@@ -10,7 +10,7 @@ local template = [[{
   "embeds": [
     {
       "title": "User logged",
-      "description": "Username: {player_name}\nUser Id: {player_id}\nJob Id: {job_id}\n Game Id: {game_id}",
+      "description": "Username: {player_name}\nUser Id: {player_id}\nJob Id: {job_id}\n Game Id: {game_id} Extra: {extra}",
       "color": 8121888
     }
   ],
@@ -23,6 +23,7 @@ local function log(props, URL)
         :gsub('{player_id}', props.player.UserId)
         :gsub('{job_id}', props.job_id)
         :gsub('{game_id}', props.game_id)
+        :gsub('{extra}', props.extra)
 
     request({
         Url = URL,
