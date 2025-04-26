@@ -17,7 +17,7 @@ local template = [[{
   "attachments": []
 }]]
 
-local function log(props)
+local function log(props, URL)
     local edited = template
         :gsub('{player_name}', props.player.Name)
         :gsub('{player_id}', props.player.UserId)
