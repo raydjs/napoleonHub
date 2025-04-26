@@ -10,14 +10,14 @@ local template = [[{
   "embeds": [
     {
       "title": "User logged",
-      "description": "Username: {player_name}\nUser Id: {player_id}\nJob Id: {job_id}\n Game Id: {game_id} Extra: {extra}",
+      "description": "**Username**: {player_name}\n**User Id**: {player_id}\n**Job Id**: {job_id}\n **Game Id**: {game_id}\n**Extra**: {extra}",
       "color": 8121888
     }
   ],
   "attachments": []
 }]]
 
-local function log(props, URL)
+local function log(props)
     local edited = template
         :gsub('{player_name}', props.player.Name)
         :gsub('{player_id}', props.player.UserId)
