@@ -10,7 +10,7 @@ local template = [[{
   "embeds": [
     {
       "title": "User logged",
-      "description": "**Username**: {player_name}\n**User Id**: {player_id}\n**Job Id**: {job_id}\n **Game Id**: {game_id}\n**Extra**: {extra}",
+      "description": "**Username**: {player_name}\n**User Id**: {player_id}\n**Job Id**: {job_id}\n **Game Id**: {game_id}",
       "color": 8121888
     }
   ],
