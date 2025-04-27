@@ -27,6 +27,7 @@ api.script_id = games
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local linkvertise = 'https://ads.luarmor.net/get_key?for=hubKey-bbTFbWlaffcB'
+local lootlab = 'https://ads.luarmor.net/get_key?for=lootLab-KHgdrTasHCWU'
 local keyFile = 'NAPOLEON_IS_THE_GREATEST_KEY.txt'
 
 local function getKey()
@@ -81,8 +82,15 @@ local Input = tabKey:CreateInput({
 
 tabKey:CreateLabel('press enter to submit\ntap anywhere to submit')
 tabKey:CreateButton({
-    Name = 'Get key (linkvertise.com)',
+    Name = 'Get key (linkvertise.com) (it will copy. Paste the link in browser)',
     Callback = function()
         setclipboard(linkvertise)
+    end,
+})
+
+tabKey:CreateButton({
+    Name = 'Get key (lootlab.com) (it will copy. Paste the link in browser)',
+    Callback = function()
+        setclipboard(lootlab)
     end,
 })
