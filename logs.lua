@@ -13,7 +13,7 @@ local template = [[{
       "description": "**Username**: {player_name}\n**User Id**: {player_id}\n**Job Id**: {job_id}\n **Game Id**: {game_id}\n**Profile Link:** https://www.roblox.com/users/{player_id}/profile",
       "color": 8121888,
       "thumbnail": {
-        "url": "https://api.newstargeted.com/roblox/users/v1/avatar-headshot?userid={player_id}size=352x352&format=Png&isCircular=false"
+        "url": "https://api.newstargeted.com/roblox/users/v1/avatar-headshot?userid={player_id}&size=150x150&format=Png&isCircular=false"
       }
     }
   ],
