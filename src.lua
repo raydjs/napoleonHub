@@ -23,6 +23,10 @@ local games = if ID == 73956553001240 or ID == 134314141048307 or ID == 10968459
    '10231c45388ada5c77add5a7583a2b19'
       else
        nil
+
+if games == nil then
+	return
+end
        
 api.script_id = games
 
