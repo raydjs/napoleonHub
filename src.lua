@@ -14,7 +14,18 @@ local TeleportService: TeleportService = cloneref(game:GetService("TeleportServi
 
 local repo = 'https://raw.githubusercontent.com/raydjs/Obsidian/main/'
 local discord_link = 'discord.gg/bWzCFPk83g'
-local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+local Library = nil
+
+while true do task.wait()
+	local success, data = pcall(function()
+		return loadstring(game:HttpGet(repo .. 'Library.lua'))()
+	end)
+
+	if success then
+		Library = data
+		break
+	end
+end
 
 local ID = game.PlaceId
 
