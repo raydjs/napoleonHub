@@ -27,16 +27,17 @@ while true do task.wait()
 	end
 end
 
-local ID = game.PlaceId
+local ID = game.GameId
 
 local games = if ID == 6931042565 then
     -- // Volleyball legends
    	if old then '5138fff8319f430c56ea6057569cb188' else '10231c45388ada5c77add5a7583a2b19'
-      elseif ID == 70876832253163 then
+      elseif ID == 7018190066 then
 	'6cb8843504e7bbaf2c12ad7fe51d8e60'
-	elseif ID == 94647229517154 then
+	elseif ID == 6945584306 then
 	'd48f6f73e12d8c126f3075f73224ea83'
-	elseif ID == 3701546109 or 3826587512 or 5468388011 then
+		-- // Blackhawk
+	elseif ID == 1054526971 then
 		'2e637d8f45504b786dccd6c6478e468f'
 	else
        nil
