@@ -92,8 +92,8 @@ Tabs.Key:AddKeyBox(function(_, ReceivedKey)
     local status = api.check_key(ReceivedKey)
 
     if status.code == 'KEY_VALID' then
-        writefile(keyFile, ReceivedKey)
         script_key = script_key or ReceivedKey
+	writefile(keyFile, script_key)
         api.load_script()
         Library:Notify("SUCCESS!", 4)
         Library:Unload()
