@@ -39,6 +39,8 @@ local games = if ID == 6931042565 then
 		-- // Blackhawk
 	elseif ID == 1054526971 then
 		'2e637d8f45504b786dccd6c6478e468f'
+	elseif ID == 7028566528 then
+	'3ee401688f1105631f74382e7b96800b'
 	else
        nil
 
