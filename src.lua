@@ -71,11 +71,6 @@ if status.code == 'KEY_VALID' then
     Library:Notify("Key is valid", 4)
     api.load_script()
     return
-elseif status.code == 'SCRIPT_ID_INCORRECT' then
-    Library:Notify('Script does not exist')
-    return
-else
-    return
 end
 
 local Window = Library:CreateWindow({
@@ -106,8 +101,14 @@ Tabs.Key:AddKeyBox(function(_, ReceivedKey)
         api.load_script()
         Library:Notify("SUCCESS!", 4)
         Library:Unload()
+    elseif status.code == 'KEY_HWID_LOCKED' then
+        Library:Notify("Key linked to a different HWID. Please reset it using our bot")
+    elseif status.code == 'KEY_INCORRECT' then
+	Library:Notify("Key is wrong or deleted")
+    elseif status.code == 'SCRIPT_ID_INCORRECT' then
+	Library:Notify('Script does not exist')
     else
-        Library:Notify("INVALID", 4)
+        Library:Notify("Error", 4)
     end
 end)
 
