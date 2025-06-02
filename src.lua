@@ -69,6 +69,11 @@ if status.code == 'KEY_VALID' then
     Library:Notify("Key is valid", 4)
     api.load_script()
     return
+elseif status.code == 'SCRIPT_ID_INCORRECT' then
+    Library:Notify('Script does not exist')
+    return
+else
+    return
 end
 
 local Window = Library:CreateWindow({
