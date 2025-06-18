@@ -1,3 +1,5 @@
+local Players = game:GetService("Players")
+
 if napoleonLoaded then
     return
 end
