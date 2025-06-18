@@ -52,6 +52,7 @@ end
        
 api.script_id = games
 
+-- // Anti Afk (ifyld)
 local gcn = getconnections or get_signal_cons
 
 if gcn then
