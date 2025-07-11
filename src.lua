@@ -38,9 +38,8 @@ local games = if ID == 6931042565 then
 	'6cb8843504e7bbaf2c12ad7fe51d8e60'
 	elseif ID == 6945584306 then
 	'd48f6f73e12d8c126f3075f73224ea83'
-		-- // Blackhawk
 	elseif ID == 1054526971 then
-		'2e637d8f45504b786dccd6c6478e468f'
+	'2e637d8f45504b786dccd6c6478e468f'
 	elseif ID == 7028566528 then
 	'1a62600f4eb00c2c17432239329aafde'
 	elseif ID == 7436755782 then
@@ -49,6 +48,8 @@ local games = if ID == 6931042565 then
 	'05d562929f3d52b114f10e5bc3802f40'
 	elseif ID == 6770632849 then
 	'37f3259776b4c4be8de391ad3837246a'
+	elseif ID == 6925303818 then
+	'477873fe2ae1822f60b28042e95c81b1'
 	else
        nil
 
