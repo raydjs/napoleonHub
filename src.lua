@@ -52,6 +52,8 @@ local games = if ID == 6931042565 then
 	'477873fe2ae1822f60b28042e95c81b1'
 	elseif ID == 7008097940 then
 	'ac8df4db983c4c2b9169f993c89f294f'
+	elseif ID == 847722000 then
+	'bebee6367bd678c0c955c20cbae5f75d'
 	else
        nil
 
