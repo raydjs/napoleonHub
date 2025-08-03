@@ -1,4 +1,5 @@
 local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
 
 if napoleonLoaded then
 	return
@@ -9,8 +10,6 @@ pcall(function()
 end)
 
 local api = loadstring(game:HttpGet("https://sdkapi-public.luarmor.net/library.lua"))()
-
-local TeleportService: TeleportService = cloneref(game:GetService("TeleportService"))
 
 local repo = "https://raw.githubusercontent.com/raydjs/Obsidian/main/"
 local discord_link = "discord.gg/bWzCFPk83g"
