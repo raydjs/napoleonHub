@@ -108,8 +108,10 @@ local status = api.check_key(script_key or key)
 
 local function execute(key)
 	if typeof(games) == "function" then
+		Library:Unload()
 		select(2, games())(key)
 	elseif typeof(games) == "string" then
+		Library:Unload()
 		api.load_script()
 	end
 end
@@ -154,7 +156,6 @@ Tabs.Key:AddKeyBox(function(_, ReceivedKey)
 		writefile(keyFile, script_key)
 		execute(script_key)
 		Library:Notify("SUCCESS!", 4)
-		Library:Unload()
 	elseif status.code == "KEY_HWID_LOCKED" then
 		Library:Notify("Key linked to a different HWID. Please reset it using our bot")
 	elseif status.code == "KEY_INCORRECT" then
