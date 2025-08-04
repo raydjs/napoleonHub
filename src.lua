@@ -54,7 +54,7 @@ local games = if ID == 6931042565
 				run_on_actor(
 					getactors()[1],
 					[=[
-    local channel = get_comm_channel(...)
+    local channel = get_comm_channel(1)
 
     channel.Event:Connect(function(...)
         script_key = select(1, ...)
@@ -66,7 +66,7 @@ local games = if ID == 6931042565
 			end
 	end
 	elseif ID == 807930589 then "b009f7183f25cec3b3b919a081cba964"
-	elseif ID == 3876150506 then '3386f605d299ca3ad8d22abd6b0cec99'
+	elseif ID == 3876150506 then "3386f605d299ca3ad8d22abd6b0cec99"
 	else nil
 
 if games == nil then
@@ -106,12 +106,11 @@ local key = getKey()
 
 local status = api.check_key(script_key or key)
 
-local function execute(key)
+local function execute(keys)
+	Library:Unload()
 	if typeof(games) == "function" then
-		Library:Unload()
-		select(2, games())(key)
+		select(2, games())(keys)
 	elseif typeof(games) == "string" then
-		Library:Unload()
 		api.load_script()
 	end
 end
@@ -145,12 +144,8 @@ Tabs.Key:AddLabel({
 })
 
 Tabs.Key:AddKeyBox(function(_, ReceivedKey)
-	if typeof(games) == "function" then
-		games(script_key or ReceivedKey)
-		return
-	end
 	local status = api.check_key(ReceivedKey)
-
+	
 	if status.code == "KEY_VALID" then
 		script_key = script_key or ReceivedKey
 		writefile(keyFile, script_key)
