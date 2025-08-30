@@ -124,6 +124,8 @@ if status.code == "KEY_VALID" then
 
 	execute(script_key)
 	return
+else
+	delfile(keyFile)
 end
 
 local Window = Library:CreateWindow({
@@ -156,10 +158,12 @@ Tabs.Key:AddKeyBox(function(_, ReceivedKey)
 	elseif status.code == "KEY_HWID_LOCKED" then
 		Library:Notify("Key linked to a different HWID. Please reset it using our bot")
 	elseif status.code == "KEY_INCORRECT" then
+		delfile(keyFile)
 		Library:Notify("Key is wrong or deleted")
 	elseif status.code == "SCRIPT_ID_INCORRECT" then
 		Library:Notify("Script does not exist")
 	else
+		delfile(keyFile)
 		Library:Notify("Error", 4)
 	end
 end)
