@@ -1,3 +1,4 @@
+
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 
@@ -117,11 +118,13 @@ local function execute(keys)
 	end
 end
 
-local function forceDel()
+local function forceDel(name)
       pcall(function()
-         delfile(keyFile)
+         delfile(name or keyFile)
 	  end)
 end
+
+forceDel("NapoleonHub")
 
 if status.code == "KEY_VALID" then
 	script_key = script_key or key
