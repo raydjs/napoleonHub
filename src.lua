@@ -54,11 +54,13 @@ local games = if ID == 6931042565
 		-- Free Ones.
 if ID == 7709344486 then
 	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/027807675820bcf0cb839befa89d9d3c.lua"))()
+	Library:Unload()
 elseif ID == 4658598196 then
 	run_on_actor(
     getactors()[1],
     'loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b0734c1956ab711253af6e6465d13d2f.lua"))()'
 )
+	Library:Unload()
 end
 
 if games == nil then
