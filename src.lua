@@ -45,32 +45,21 @@ local games = if ID == 6931042565
 	elseif ID == 7008097940 then "ac8df4db983c4c2b9169f993c89f294f"
 	elseif ID == 847722000 then "bebee6367bd678c0c955c20cbae5f75d"
 	elseif ID == 7744159391 then "6a69cfade8203344c5ebb69f775b7648"
-	elseif ID == 4658598196 then function(key)
-		return "b0734c1956ab711253af6e6465d13d2f",
-			function(key)
-				local comm_id, event = create_comm_channel()
-				task.delay(3, function()
-					event:Fire(key)
-				end)
-				run_on_actor(
-					getactors()[1],
-					[=[
-    local channel = get_comm_channel(1)
-
-    channel.Event:Connect(function(...)
-        script_key = select(1, ...)
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b0734c1956ab711253af6e6465d13d2f.lua"))()
-    end)
-]=],
-					comm_id
-				)
-			end
-	end
 	elseif ID == 807930589 then "b009f7183f25cec3b3b919a081cba964"
 	elseif ID == 3876150506 then "3386f605d299ca3ad8d22abd6b0cec99"
 	elseif ID == 187796008 then "c9faedbfe2b2f9ce56ceeaa5c26b0ec9"
 	elseif ID == 7750955984 then "2a8e130d12f1c6f9b73f6fe7daa0795b"
 	else nil
+
+		-- Free Ones.
+if ID == 7709344486 then
+	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/027807675820bcf0cb839befa89d9d3c.lua"))()
+elseif ID == 4658598196 then
+	run_on_actor(
+    getactors()[1],
+    'loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b0734c1956ab711253af6e6465d13d2f.lua"))()'
+)
+end
 
 if games == nil then
 	return
