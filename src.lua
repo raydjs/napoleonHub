@@ -49,13 +49,11 @@ local games = if ID == 6931042565
 	elseif ID == 3876150506 then "3386f605d299ca3ad8d22abd6b0cec99"
 	elseif ID == 187796008 then "c9faedbfe2b2f9ce56ceeaa5c26b0ec9"
 	elseif ID == 7750955984 then "2a8e130d12f1c6f9b73f6fe7daa0795b"
+	elseif ID == 7709344486 then "027807675820bcf0cb839befa89d9d3c"
 	else nil
 
 		-- Free Ones.
-if ID == 7709344486 then
-	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/027807675820bcf0cb839befa89d9d3c.lua"))()
-	Library:Unload()
-elseif ID == 4658598196 then
+if ID == 4658598196 then
 	run_on_actor(
     getactors()[1],
     'loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b0734c1956ab711253af6e6465d13d2f.lua"))()'
